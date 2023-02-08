@@ -28,13 +28,16 @@
         android:layout_height="70dp"
         android:layout_marginStart="96dp"
         android:layout_marginTop="508dp"
+        android:backgroundTint="@color/buttonBackGround"
+        android:fontFamily="@font/tt_chocolates_regular"
         android:onClick="goLogin"
         android:text="@string/buttonMain"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
         app:cornerRadius="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/subTitle"
