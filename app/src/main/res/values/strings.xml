@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">Focus</string>
+    //startApp
+    <string name="app_name">FOCUS</string>
+    <string name="subTitleMain">No dejes todo a ultimo momento</string>
+    <string name="buttonMain">CONTINUAR</string>
+    //loginPage
+    <string name="loginText">Iniciar Sesión</string>
+    <string name="loginSubTitle">Por favor, inicie sesión para continuar</string>
+    <string name="passForgot">¿Olvidaste tu contraseña?</string>
+    //mainPage
+
 </resources>

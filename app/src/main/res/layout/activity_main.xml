@@ -2,16 +2,49 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pageEntry"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backGround"
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textView2"
+        android:layout_width="274dp"
+        android:layout_height="118dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="248dp"
+        android:fontFamily="@font/tt_chocolates_medium"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textSize="80sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textFontWeight="500" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="508dp"
+        android:onClick="goLogin"
+        android:text="@string/buttonMain"
+        app:cornerRadius="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/subTitle"
+        android:layout_width="257dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="336dp"
+        android:fontFamily="@font/tt_chocolates_light"
+        android:text="@string/subTitleMain"
+        android:textSize="17dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
