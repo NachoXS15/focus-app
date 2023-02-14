@@ -9,6 +9,9 @@
     <string name="passForgot">¿Olvidaste tu contraseña?</string>
     <string name="account">¿No tenes una cuenta?</string>
     <string name="signUp">Registrate</string>
+    <string name="buttonMainLogin">INICIAR SESIÓN</string>
     //mainPage
+    <string name="textHint1">Lista de</string>
+    <string name="textHint2">Recordatorios</string>
 
 </resources>
