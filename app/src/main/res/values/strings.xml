@@ -7,6 +7,8 @@
     <string name="loginText">Iniciar Sesión</string>
     <string name="loginSubTitle">Por favor, inicie sesión para continuar</string>
     <string name="passForgot">¿Olvidaste tu contraseña?</string>
+    <string name="account">¿No tenes una cuenta?</string>
+    <string name="signUp">Registrate</string>
     //mainPage
 
 </resources>
