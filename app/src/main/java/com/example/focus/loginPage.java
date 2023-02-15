@@ -15,7 +15,7 @@ public class loginPage extends AppCompatActivity {
     }
 
     public void goMain (View view){
-        Intent avanzar = new Intent(this, mainPage.class);
+        Intent avanzar = new Intent(this, drawerActivity.class);
         startActivity(avanzar);
     }
 }
