@@ -23,7 +23,7 @@
         tools:textFontWeight="500" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonLogin"
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_marginStart="96dp"
