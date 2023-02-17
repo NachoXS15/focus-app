@@ -56,10 +56,11 @@
         android:layout_width="52dp"
         android:layout_height="49dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="52dp"
+        android:onClick="goOptions"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/lista" />
+        app:srcCompat="@mipmap/usuario" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addItem"
