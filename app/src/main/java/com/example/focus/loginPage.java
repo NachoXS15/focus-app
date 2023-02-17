@@ -22,7 +22,6 @@ public class loginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_page);
 
-<<<<<<< HEAD
         user = findViewById(R.id.userText);
         pass = findViewById(R.id.passText);
         button = findViewById(R.id.buttonLogin);
@@ -41,10 +40,3 @@ public class loginPage extends AppCompatActivity {
     }}
 
 
-=======
-    public void goMain (View view){
-        Intent avanzar = new Intent(this, drawerActivity.class);
-        startActivity(avanzar);
-    }
-}
->>>>>>> a93d05b19f9abbaf7725c99879bc35f09945f183
