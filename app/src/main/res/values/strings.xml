@@ -30,5 +30,6 @@
     <string name="dateItem">Fecha</string>
     <string name="timeItem">Hora</string>
     <string name="textview">TextView</string>
+    <string name="user">user</string>
 
 </resources>

@@ -2,6 +2,7 @@ package com.example.focus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -37,6 +38,11 @@ public class addItem extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public void goBackMain(View view){
+        Intent volverMenu = new Intent (this, mainPage.class);
+        startActivity(volverMenu);
     }
 
     private void cleanSlot(){
