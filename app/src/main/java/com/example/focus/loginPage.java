@@ -35,11 +35,9 @@ public class loginPage extends AppCompatActivity {
                 if (user.getText().toString().equals("pantojaignacio123") && pass.getText().toString().equals("nacho123")) {
                     DbHelper dbHelper = new DbHelper(loginPage.this);
                     SQLiteDatabase db = dbHelper.getWritableDatabase();
-                    if(db != null){
-                        Toast.makeText(loginPage.this, "BASE CREADA", Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(loginPage.this, "ERROR", Toast.LENGTH_SHORT).show();
-                    }
+
+                    Intent avanzar = new Intent (loginPage.this, mainPage.class);
+                    startActivity(avanzar);
                 } else {
                     Toast.makeText(loginPage.this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
                 }

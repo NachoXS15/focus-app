@@ -64,11 +64,11 @@
         android:id="@+id/dateText"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="387dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="380dp"
         android:ems="10"
         android:hint="@string/dateItem"
-        android:inputType="date"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
