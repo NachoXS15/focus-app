@@ -19,5 +19,16 @@
     <string name="data">Datos Académicos</string>
     <string name="calendar">Calendario</string>
     <string name="settings">Configuración</string>
+    //setings
+    <string name="userName">Patricio Pedersoli</string>
+    <string name="mail"></string>
+    <string name="id">EPM500</string>
+    //addItem
+    <string name="titleAdd">Nuevo Recordatorio</string>
+    <string name="newItemTitle">Titulo</string>
+    <string name="descItem">Descripción</string>
+    <string name="dateItem">Fecha</string>
+    <string name="timeItem">Hora</string>
+    <string name="textview">TextView</string>
 
 </resources>
