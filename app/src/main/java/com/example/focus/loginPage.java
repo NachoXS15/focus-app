@@ -3,12 +3,15 @@ package com.example.focus;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.focus.db.DbHelper;
 
 public class loginPage extends AppCompatActivity {
 
@@ -30,8 +33,13 @@ public class loginPage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (user.getText().toString().equals("pantojaignacio123") && pass.getText().toString().equals("nacho123")) {
-                    Intent avanzar = new Intent (loginPage.this, mainPage.class);
-                    startActivity(avanzar);
+                    DbHelper dbHelper = new DbHelper(loginPage.this);
+                    SQLiteDatabase db = dbHelper.getWritableDatabase();
+                    if(db != null){
+                        Toast.makeText(loginPage.this, "BASE CREADA", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(loginPage.this, "ERROR", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     Toast.makeText(loginPage.this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
                 }
