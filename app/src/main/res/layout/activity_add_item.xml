@@ -85,7 +85,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck"
-        tools:srcCompat="@mipmap/add_item" />
+        android:src="@mipmap/cheque"/>
 
     <ImageView
         android:id="@+id/backBtn"
@@ -96,6 +96,7 @@
         android:onClick="goBackMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/left_arrow" />
+        app:srcCompat="@mipmap/left_arrow"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -57,6 +57,7 @@
         android:layout_height="62dp"
         android:layout_marginStart="104dp"
         android:layout_marginTop="520dp"
+        android:onClick="goCalendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/calendario" />
@@ -124,6 +125,7 @@
         android:layout_marginStart="154dp"
         android:layout_marginTop="543dp"
         android:fontFamily="@font/tt_chocolates_medium"
+        android:onClick="goCalendar"
         android:text="@string/calendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
