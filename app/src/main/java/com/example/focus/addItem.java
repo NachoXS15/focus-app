@@ -40,6 +40,24 @@ public class addItem extends AppCompatActivity {
         });
     }
 
+    //clear edittext
+
+    public void clearAll(View view){
+        FloatingActionButton clear = findViewById(R.id.clearText);
+        clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                title.setText("");
+                desc.setText("");
+                date.setText("");
+            }
+        });
+    }
+
+
+
+
+
     public void goBackMain(View view){
         Intent volverMenu = new Intent (this, mainPage.class);
         startActivity(volverMenu);

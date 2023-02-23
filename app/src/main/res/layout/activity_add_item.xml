@@ -76,16 +76,16 @@
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="520dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="516dp"
         android:clickable="true"
         android:elevation="200dp"
         android:onClick="sendData"
+        android:src="@mipmap/cheque"
         app:backgroundTint="@color/purpleLight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:src="@mipmap/cheque"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/backBtn"
@@ -98,5 +98,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/left_arrow"
         tools:ignore="SpeakableTextPresentCheck" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/clearText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="516dp"
+        android:clickable="true"
+        android:onClick="clearAll"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@mipmap/cancel"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

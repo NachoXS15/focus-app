@@ -28,7 +28,6 @@ public class optionsMenu extends AppCompatActivity {
         startActivity(config);
     }
 
-
     public void goBack(View view){
          Intent volver = new Intent(this, mainPage.class);
          startActivity(volver);
