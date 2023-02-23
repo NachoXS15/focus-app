@@ -14,3 +14,7 @@ Algunas cosas que podrás hacer:
 * Agregar cuantas tareas quieras y almacenarlos en una base de datos SQLite.
 * Ver toda tu información acádemica en un solo lugar.
 
+
+![main](https://user-images.githubusercontent.com/86374911/221046085-32432197-d4c0-49d8-a4ee-43b951f65b44.jpg)
+![add](https://user-images.githubusercontent.com/86374911/221046095-c6627096-8a14-481d-869f-2c0dcde8e78f.jpg)
+![options](https://user-images.githubusercontent.com/86374911/221046099-29816004-4926-4221-8847-866fe9d9e35f.jpg)
