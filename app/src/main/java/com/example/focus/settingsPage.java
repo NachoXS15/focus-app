@@ -2,7 +2,9 @@ package com.example.focus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class settingsPage extends AppCompatActivity {
 
@@ -12,17 +14,9 @@ public class settingsPage extends AppCompatActivity {
         setContentView(R.layout.activity_settings_page);
     }
 
-    public class user {
-        String username;
-        String matricula;
-        String mail;
 
-        public user (String username, String matricula, String mail){
-            this.username = username;
-            this.matricula = matricula;
-            this.mail = mail;
-        }
-
-        user Patricio = new user ("Patricio Pedersoli", "EPM500", "patricioperdersoli@gmail.com");
+    public void goBack(View view){
+        Intent volver = new Intent(this, optionsMenu.class);
+        startActivity(volver);
     }
 }

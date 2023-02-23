@@ -21,7 +21,62 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="358dp" />
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="344dp"
+        android:fontFamily="@font/tt_chocolates_medium"
+        android:text="@string/userName"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="380dp"
+        android:text="@string/mail"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:fontFamily="@font/tt_chocolates_medium" />
+
+    <TextView
+        android:id="@+id/titleAdd"
+        android:layout_width="74dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="408dp"
+        android:background="@drawable/round_corner3"
+        android:fontFamily="@font/tt_chocolates_bold"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        android:text="@string/id"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="48dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/left_arrow" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="48dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="344dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/campana" />
 </androidx.constraintlayout.widget.ConstraintLayout>

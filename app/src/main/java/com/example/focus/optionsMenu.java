@@ -19,12 +19,8 @@ public class optionsMenu extends AppCompatActivity {
         Intent calendar = new Intent(this, calendarPage.class);
         startActivity(calendar);
     }
-    public void goData(View view){
-        Intent volver = new Intent(this, mainPage.class);
-        startActivity(volver);
-    }
     public void goSetting(View view){
-        Intent config = new Intent(this, mainPage.class);
+        Intent config = new Intent(this, settingsPage.class);
         startActivity(config);
     }
 

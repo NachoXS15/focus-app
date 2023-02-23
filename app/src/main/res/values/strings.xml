@@ -14,14 +14,14 @@
     <string name="textHint1">Lista de</string>
     <string name="textHint2">Recordatorios</string>
     //options menu
-    <string name="hiText">¡Hola Patricio!</string>
+    <string name="hiText">¡Hola Ignacio!</string>
     <string name="start">Inicio</string>
     <string name="data">Datos Académicos</string>
     <string name="calendar">Calendario</string>
     <string name="settings">Configuración</string>
     //setings
-    <string name="userName">Patricio Pedersoli</string>
-    <string name="mail"></string>
+    <string name="userName">Ignacio Joaquín Pantoja</string>
+    <string name="mail">pantojaignacio642@gmail.com</string>
     <string name="id">EPM500</string>
     //addItem
     <string name="titleAdd">Nuevo Recordatorio</string>
@@ -31,5 +31,7 @@
     <string name="timeItem">Hora</string>
     <string name="textview">TextView</string>
     <string name="user">user</string>
+    //calendario
+    <string name="titleCalendar">Calendario</string>
 
 </resources>

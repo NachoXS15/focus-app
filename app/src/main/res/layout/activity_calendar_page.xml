@@ -7,11 +7,28 @@
     android:background="@color/backGround"
     tools:context=".calendarPage">
 
+    <TextView
+        android:id="@+id/titleAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="116dp"
+        android:background="@drawable/round_corner3"
+        android:fontFamily="@font/tt_chocolates_bold"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:text="@string/titleCalendar"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="403dp"
         android:layout_height="308dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="232dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
