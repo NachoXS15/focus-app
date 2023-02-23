@@ -2,19 +2,119 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textLogin"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backGround"
     tools:context=".loginPage">
 
     <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="320dp"
+        android:fontFamily="@font/narin_regular"
+        android:text="@string/loginSubTitle"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/titleLogin1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="292dp"
+        android:fontFamily="@font/tt_chocolates_bold"
         android:text="@string/loginText"
         android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="210dp"
+        android:layout_height="308dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/calendar_3d" />
+
+    <EditText
+        android:id="@+id/userText"
+        android:layout_width="342dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="376dp"
+        android:ems="10"
+        android:fontFamily="@font/tt_chocolates_light"
+        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/passText"
+        android:layout_width="342dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="432dp"
+        android:ems="10"
+        android:fontFamily="@font/tt_chocolates_light"
+        android:hint="PASSWORD"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="500dp"
+        android:backgroundTint="@color/buttonBackGround"
+        android:fontFamily="@font/tt_chocolates_regular"
+        android:onClick="goMain"
+        android:text="@string/buttonMainLogin"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:cornerRadius="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="588dp"
+        android:text="@string/passForgot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="145dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="680dp"
+        android:text="@string/account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="680dp"
+        android:text="@string/signUp"
+        android:textColor="@color/buttonBackGround"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
