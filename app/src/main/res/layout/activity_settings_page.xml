@@ -58,7 +58,7 @@
         app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textAlignment="center" />
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/imageView14"
