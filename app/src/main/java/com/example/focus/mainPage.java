@@ -1,30 +1,18 @@
 package com.example.focus;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ListView;
-
 import com.example.focus.adapters.listItemAdapter;
 import com.example.focus.db.DbItems;
 import com.example.focus.entities.Items;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
-import java.util.List;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Type;
-import java.util.List;
 
 public class mainPage extends AppCompatActivity {
 
@@ -43,7 +31,6 @@ public class mainPage extends AppCompatActivity {
         listItemAdapter adapter = new listItemAdapter((dbItems.showItems()));
         listItem.setAdapter(adapter);
     }
-
     //move through activities
     public void goOptions (View view){
         Intent avanzarOptions = new Intent(this, optionsMenu.class);
