@@ -22,29 +22,36 @@ public class createUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
 
-        EditText email, pass;
+        EditText email, pass, checkPass;
         Button btnCreate;
 
         email = findViewById(R.id.emailCreate);
         pass = findViewById(R.id.passwordCreate);
+        checkPass = findViewById(R.id.checkedPassword);
         btnCreate = findViewById(R.id.buttonCreate);
+        mAuth = FirebaseAuth.getInstance();
 
-        btnCreate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mAuth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            Intent goLogin = new Intent (createUser.this, loginPage.class);
-                            startActivity(goLogin);
-                            Toast.makeText(createUser.this, "Usuario creado!", Toast.LENGTH_SHORT).show();
-                        }else{
-                            Toast.makeText(createUser.this, "", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
-        });
+        if (!pass.getText().toString().equals(checkPass.getText().toString())){
+            Toast.makeText(this, "Password don't match", Toast.LENGTH_SHORT).show();
+        }else{
+            btnCreate.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mAuth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString()).addOnCompleteListener(
+                             new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()){
+                                        Toast.makeText(createUser.this, "Registro correcto", Toast.LENGTH_SHORT).show();
+                                        Intent goLogin = new Intent(createUser.this, MainActivity.class);
+                                        startActivity(goLogin);
+                                    }
+                                }
+                            }
+                    );
+                }
+            });
+        }
+
     }
 }

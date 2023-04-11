@@ -113,6 +113,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="232dp"
         android:layout_marginTop="680dp"
+        android:onClick="goCreate"
         android:text="@string/signUp"
         android:textColor="@color/buttonBackGround"
         app:layout_constraintStart_toStartOf="parent"
