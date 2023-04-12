@@ -53,6 +53,10 @@ public class loginPage extends AppCompatActivity {
         Intent create = new Intent(this, createUser.class);
         startActivity(create);
     }
+    public void goRecover(View view){
+        Intent recover = new Intent(this, recoverPassword.class);
+        startActivity(recover);
+    }
 }
 
 
