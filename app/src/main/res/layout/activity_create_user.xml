@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backGround"
     tools:context=".createUser">
 
     <EditText
@@ -13,6 +14,8 @@
         android:layout_marginStart="103dp"
         android:layout_marginTop="87dp"
         android:ems="10"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         android:hint="Ingrese email"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -29,6 +32,8 @@
         android:hint="Ingrese contraseña"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +47,8 @@
         android:hint="Re-ingrese contraseña"
         android:inputType="textPassword"
         android:minHeight="48dp"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,6 +59,7 @@
         android:layout_marginStart="128dp"
         android:layout_marginTop="340dp"
         android:text="Crear usuario"
+        android:backgroundTint="@color/buttonBackGround"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -93,6 +93,7 @@
         android:layout_marginTop="593dp"
         android:fontFamily="@font/tt_chocolates_medium"
         android:onClick="goSetting"
+        android:textColor="@color/white"
         android:text="@string/settings"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -112,6 +113,7 @@
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:layout_marginStart="154dp"
         android:layout_marginTop="492dp"
@@ -128,6 +130,7 @@
         android:layout_marginTop="543dp"
         android:fontFamily="@font/tt_chocolates_medium"
         android:onClick="goCalendar"
+        android:textColor="@color/white"
         android:text="@string/calendar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
