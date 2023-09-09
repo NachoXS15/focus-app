@@ -1,10 +1,10 @@
 package com.example.focus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class optionsMenu extends AppCompatActivity {
 
@@ -15,6 +15,11 @@ public class optionsMenu extends AppCompatActivity {
     }
 
     //go activities
+    public void goStart(View view) {
+        Intent start = new Intent(this, MainActivity.class);
+        startActivity(start);
+    }
+
     public void goCalendar(View view){
         Intent calendar = new Intent(this, calendarPage.class);
         startActivity(calendar);

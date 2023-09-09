@@ -5,11 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.focus.adapters.listItemAdapter;
-import com.example.focus.db.DbItems;
 import com.example.focus.entities.Items;
 
 import java.util.ArrayList;
@@ -22,6 +19,7 @@ public class mainPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        /*
         listItem = findViewById(R.id.listItem);
         listItem.setLayoutManager(new LinearLayoutManager(this));
 
@@ -30,6 +28,7 @@ public class mainPage extends AppCompatActivity {
 
         listItemAdapter adapter = new listItemAdapter((dbItems.showItems()));
         listItem.setAdapter(adapter);
+         */
     }
     //move through activities
     public void goOptions (View view){
