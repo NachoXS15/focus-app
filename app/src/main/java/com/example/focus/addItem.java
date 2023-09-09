@@ -41,8 +41,8 @@ public class addItem extends AppCompatActivity {
             public void onClick(View view) {
 
                 String title = titleText.getText().toString();
-                String desc = titleText.getText().toString();
-                String date = titleText.getText().toString();
+                String desc = descText.getText().toString();
+                String date = dateText.getText().toString();
 
                 if(title.isEmpty() || desc.isEmpty() || date.isEmpty()){
                     Toast.makeText(addItem.this, "Datos faltantes", Toast.LENGTH_SHORT).show();
@@ -68,9 +68,9 @@ public class addItem extends AppCompatActivity {
     private void addItemsFS (String title, String desc, String date){
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         Map<String, Object> task = new HashMap<>();
-        task.put("title", title);
-        task.put("desc", desc);
-        task.put("date", date);
+        task.put("Titulo", title);
+        task.put("Descripcion", desc);
+        task.put("Fecha", date);
         db.collection("Tasks").add(task).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
