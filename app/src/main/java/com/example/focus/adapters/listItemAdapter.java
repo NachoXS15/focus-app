@@ -3,6 +3,7 @@ package com.example.focus.adapters;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,8 +26,10 @@ public class listItemAdapter extends FirestoreRecyclerAdapter<Items, listItemAda
     }
 
     @Override
-    protected void onBindViewHolder(@NonNull listItemAdapter.ViewHolder holder, int position, @NonNull Items model) {
-
+    protected void onBindViewHolder(@NonNull ViewHolder viewHolder, int position, @NonNull Items model) {
+        viewHolder.title.setText(model.getTitulo());
+        viewHolder.desc.setText(model.getDescripcion());
+        viewHolder.date.setText(model.getFecha());
     }
 
     @NonNull
@@ -36,9 +39,15 @@ public class listItemAdapter extends FirestoreRecyclerAdapter<Items, listItemAda
         return new ViewHolder(v);
     }
 
-    public class ViewHolder extends  RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        TextView title, desc, date;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+
+            title = itemView.findViewById(R.id.viewTitle);
+            desc = itemView.findViewById(R.id.viewDesc);
+            date = itemView.findViewById(R.id.viewDate);
         }
     }
 }
