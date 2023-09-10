@@ -68,13 +68,14 @@
         android:layout_height="274dp"
         android:layout_marginTop="356dp"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listItem"
             android:layout_width="335dp"
-            android:layout_height="242dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal|center_vertical" />
     </LinearLayout>
 

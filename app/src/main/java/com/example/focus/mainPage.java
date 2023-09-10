@@ -35,17 +35,6 @@ public class mainPage extends AppCompatActivity {
         mAdapter = new listItemAdapter(firestoreRecyclerOptions);
         mAdapter.notifyDataSetChanged();
         listItemRecycler.setAdapter(mAdapter);
-
-        /*
-        listItem = findViewById(R.id.listItem);
-        listItem.setLayoutManager(new LinearLayoutManager(this));
-
-        DbItems dbItems = new DbItems(mainPage.this);
-        itemsArrayList = new ArrayList<>();
-
-        listItemAdapter adapter = new listItemAdapter((dbItems.showItems()));
-        listItem.setAdapter(adapter);
-         */
     }
     //move through activities
     public void goOptions (View view){
