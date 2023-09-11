@@ -36,7 +36,7 @@ public class recoverPassword extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Toast.makeText(recoverPassword.this, "exito", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(recoverPassword.this, "Éxito, revise su correo", Toast.LENGTH_SHORT).show();
                             Intent goBack = new Intent(recoverPassword.this, loginPage.class);
                             startActivity(goBack);
                         }else{

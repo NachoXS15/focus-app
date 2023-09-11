@@ -46,6 +46,7 @@ public class addItem extends AppCompatActivity {
 
                 if(title.isEmpty() || desc.isEmpty() || date.isEmpty()){
                     Toast.makeText(addItem.this, "Datos faltantes", Toast.LENGTH_SHORT).show();
+
                 }else{
                     addItemsFS(title, desc, date);
                 }
@@ -76,6 +77,8 @@ public class addItem extends AppCompatActivity {
             public void onSuccess(DocumentReference documentReference) {
                 Toast.makeText(addItem.this, "Datos guardados en db", Toast.LENGTH_SHORT).show();
                 Log.d("ID: ", documentReference.getId());
+                Intent volverMenu = new Intent (addItem.this, mainPage.class);
+                startActivity(volverMenu);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -101,8 +104,7 @@ public class addItem extends AppCompatActivity {
     }
 
     public void goBackMain(View view){
-        Intent volverMenu = new Intent (this, mainPage.class);
-        startActivity(volverMenu);
+
     }
 
 }
