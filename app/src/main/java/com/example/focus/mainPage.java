@@ -32,7 +32,7 @@ public class mainPage extends AppCompatActivity {
         FirestoreRecyclerOptions <Items> firestoreRecyclerOptions =
                 new FirestoreRecyclerOptions.Builder<Items>().setQuery(query, Items.class).build();
 
-        mAdapter = new listItemAdapter(firestoreRecyclerOptions);
+        mAdapter = new listItemAdapter(firestoreRecyclerOptions, this);
         mAdapter.notifyDataSetChanged();
         listItemRecycler.setAdapter(mAdapter);
     }
