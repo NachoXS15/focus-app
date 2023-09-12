@@ -30,27 +30,31 @@ public class loginPage extends AppCompatActivity {
         pass = findViewById(R.id.passText);
         button = findViewById(R.id.buttonLogin);
         mAuth = FirebaseAuth.getInstance();
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signInWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (user.getText().toString().isEmpty() || pass.getText().toString().isEmpty()){
-                            Toast.makeText(loginPage.this, "Ingrese datos faltantes", Toast.LENGTH_SHORT).show();
-                        }
-                        if (task.isSuccessful()){
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Intent goMenu = new Intent(loginPage.this, mainPage.class);
-                            startActivity(goMenu);
-                            Toast.makeText(loginPage.this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
-                        }else {
-                            Toast.makeText(loginPage.this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-            }
-        });
+
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(user.getText().toString().isEmpty() || pass.getText().toString().isEmpty()){
+                        Toast.makeText(loginPage.this, "Ingrese datos faltantes", Toast.LENGTH_SHORT).show();
+                    }else{
+                        mAuth.signInWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (user.getText().toString().isEmpty() || pass.getText().toString().isEmpty()){
+                                    Toast.makeText(loginPage.this, "Ingrese datos faltantes", Toast.LENGTH_SHORT).show();
+                                }
+                                if (task.isSuccessful()){
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    Intent goMenu = new Intent(loginPage.this, mainPage.class);
+                                    startActivity(goMenu);
+                                    Toast.makeText(loginPage.this, "Sesión iniciada", Toast.LENGTH_SHORT).show();
+                                }else {
+                                    Toast.makeText(loginPage.this, "Usuario no encontrado", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+                }}
+            });
     }
     public void goCreate(View view){
         Intent create = new Intent(this, createUser.class);
@@ -60,7 +64,7 @@ public class loginPage extends AppCompatActivity {
         Intent recover = new Intent(this, recoverPassword.class);
         startActivity(recover);
     }
-}
 
+}
 
 

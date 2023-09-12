@@ -38,20 +38,25 @@ public class createUser extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     mAuth.createUserWithEmailAndPassword(email.getText().toString(), pass.getText().toString()).addOnCompleteListener(
-                             new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()){
-                                        Toast.makeText(createUser.this, "Registro correcto", Toast.LENGTH_SHORT).show();
-                                        Intent goLogin = new Intent(createUser.this, MainActivity.class);
-                                        startActivity(goLogin);
-                                    }
+                         new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()){
+                                    Toast.makeText(createUser.this, "Registro correcto", Toast.LENGTH_SHORT).show();
+                                    Intent goLogin = new Intent(createUser.this, MainActivity.class);
+                                    startActivity(goLogin);
                                 }
                             }
+                        }
                     );
                 }
             });
         }
 
+    }
+
+    public void goBackLogin(View view){
+        Intent volver = new Intent(this, loginPage.class);
+        startActivity(volver);
     }
 }

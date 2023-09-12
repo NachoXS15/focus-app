@@ -48,4 +48,9 @@ public class recoverPassword extends AppCompatActivity {
         });
 
     }
+
+    public void goBackLogin(View view){
+        Intent volver = new Intent(this, loginPage.class);
+        startActivity(volver);
+    }
 }
