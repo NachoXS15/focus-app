@@ -29,8 +29,6 @@ public class addItem extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_item);
 
-
-
         FloatingActionButton add = findViewById(R.id.addButton);
         titleText =  findViewById(R.id.titleText);
         descText =  findViewById(R.id.descText);
@@ -46,11 +44,15 @@ public class addItem extends AppCompatActivity {
 
                 if(title.isEmpty() || desc.isEmpty() || date.isEmpty()){
                     Toast.makeText(addItem.this, "Datos faltantes", Toast.LENGTH_SHORT).show();
-
                 }else{
                     addItemsFS(title, desc, date);
                 }
+
+
                 /*
+
+                old sql connection
+
                  DbItems dbItems = new DbItems(addItem.this);
                 long id = dbItems.addItems(title.getText().toString(), desc.getText().toString(), date.getText().toString());
 
@@ -60,7 +62,6 @@ public class addItem extends AppCompatActivity {
                 }else{
                     Toast.makeText(addItem.this, "REGISTRO fallido", Toast.LENGTH_LONG).show();
                 }
-
                  */
             }
         });
@@ -104,7 +105,8 @@ public class addItem extends AppCompatActivity {
     }
 
     public void goBackMain(View view){
-
+        Intent volverMain = new Intent(this, mainPage.class);
+        startActivity(volverMain);
     }
 
 }

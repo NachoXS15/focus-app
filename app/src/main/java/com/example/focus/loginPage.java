@@ -40,9 +40,6 @@ public class loginPage extends AppCompatActivity {
                         mAuth.signInWithEmailAndPassword(user.getText().toString(), pass.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (user.getText().toString().isEmpty() || pass.getText().toString().isEmpty()){
-                                    Toast.makeText(loginPage.this, "Ingrese datos faltantes", Toast.LENGTH_SHORT).show();
-                                }
                                 if (task.isSuccessful()){
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     Intent goMenu = new Intent(loginPage.this, mainPage.class);
