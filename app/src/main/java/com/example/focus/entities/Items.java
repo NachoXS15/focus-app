@@ -1,40 +1,38 @@
 package com.example.focus.entities;
 
 public class Items {
-    private int id;
-    private String title;
-    private String descr;
-    private String date;
+    String Titulo, Descripcion, Fecha;
+    public Items(){}
 
-    public int getId() {
-        return id;
+    public Items(String titulo, String descripcion, String fecha) {
+        this.Titulo = titulo;
+        this.Descripcion = descripcion;
+        this.Fecha = fecha;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public String getTitulo() {
+        return Titulo;
     }
 
-    public String getTitle() {
-        return title;
+    public void setTitulo(String titulo) {
+        Titulo = titulo;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public String getDescripcion() {
+        return Descripcion;
     }
 
-    public String getDescr() {
-        return descr;
+    public void setDescripcion(String descripcion) {
+        Descripcion = descripcion;
     }
 
-    public void setDescr(String descr) {
-        this.descr = descr;
+    public String getFecha() {
+        return Fecha;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
+    public void setFecha(String fecha) {
+        Fecha = fecha;
     }
 }
+
+

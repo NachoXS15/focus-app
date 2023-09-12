@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="320dp"
+        android:textColor="@color/white"
         android:fontFamily="@font/narin_regular"
         android:text="@string/loginSubTitle"
         android:textSize="16sp"
@@ -22,6 +23,7 @@
 
     <TextView
         android:id="@+id/titleLogin1"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -50,14 +52,18 @@
         android:layout_height="42dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="376dp"
+        android:textColor="@color/white"
         android:ems="10"
+        style="@style/borderEditText"
         android:fontFamily="@font/tt_chocolates_light"
         android:hint="EMAIL"
+        android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
+        android:textColor="@color/white"
         android:id="@+id/passText"
         android:layout_width="342dp"
         android:layout_height="42dp"
@@ -66,6 +72,8 @@
         android:ems="10"
         android:fontFamily="@font/tt_chocolates_light"
         android:hint="PASSWORD"
+        style="@style/borderEditText"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -74,13 +82,14 @@
         android:id="@+id/buttonLogin"
         android:layout_width="200dp"
         android:layout_height="70dp"
+        android:textColor="@color/white"
         android:layout_marginStart="96dp"
         android:layout_marginTop="500dp"
         android:backgroundTint="@color/buttonBackGround"
         android:fontFamily="@font/tt_chocolates_regular"
         android:onClick="goMain"
         android:text="@string/buttonMainLogin"
-        android:textColor="@color/white"
+
         android:textSize="20sp"
 
         app:cornerRadius="40dp"
@@ -93,13 +102,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginTop="588dp"
+        android:onClick="goRecover"
         android:text="@string/passForgot"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="145dp"
+        android:textColor="@color/white"
         android:layout_height="20dp"
         android:layout_marginStart="84dp"
         android:layout_marginTop="680dp"
@@ -113,6 +126,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="232dp"
         android:layout_marginTop="680dp"
+        android:onClick="goCreate"
         android:text="@string/signUp"
         android:textColor="@color/buttonBackGround"
         app:layout_constraintStart_toStartOf="parent"

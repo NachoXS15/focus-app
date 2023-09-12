@@ -30,11 +30,13 @@
         android:paddingHorizontal="15dp"
         android:paddingVertical="10dp"
         android:text="@string/titleAdd"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:cornerRadius="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textAllCaps="false" />
 
     <EditText
         android:id="@+id/titleText"
@@ -43,7 +45,10 @@
         android:layout_marginStart="98dp"
         android:layout_marginTop="247dp"
         android:ems="10"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         android:hint="@string/newItemTitle"
+        android:textColor="@color/white"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +62,10 @@
         android:ems="10"
         android:hint="@string/descItem"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
@@ -68,7 +76,10 @@
         android:layout_marginTop="380dp"
         android:ems="10"
         android:hint="@string/dateItem"
+        android:textColorHint="@color/white"
+        style="@style/borderEditText"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

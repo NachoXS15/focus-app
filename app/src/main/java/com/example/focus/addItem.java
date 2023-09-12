@@ -1,19 +1,28 @@
 package com.example.focus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.focus.db.DbItems;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class addItem extends AppCompatActivity {
 
-    EditText title, desc, date; 
+    EditText titleText, descText, dateText;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,21 +30,62 @@ public class addItem extends AppCompatActivity {
         setContentView(R.layout.activity_add_item);
 
         FloatingActionButton add = findViewById(R.id.addButton);
-        title =  findViewById(R.id.titleText);
-        desc =  findViewById(R.id.descText);
-        date =  findViewById(R.id.dateText);
+        titleText =  findViewById(R.id.titleText);
+        descText =  findViewById(R.id.descText);
+        dateText =  findViewById(R.id.dateText);
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DbItems dbItems = new DbItems(addItem.this);
+
+                String title = titleText.getText().toString();
+                String desc = descText.getText().toString();
+                String date = dateText.getText().toString();
+
+                if(title.isEmpty() || desc.isEmpty() || date.isEmpty()){
+                    Toast.makeText(addItem.this, "Datos faltantes", Toast.LENGTH_SHORT).show();
+                }else{
+                    addItemsFS(title, desc, date);
+                }
+
+
+                /*
+
+                old sql connection
+
+                 DbItems dbItems = new DbItems(addItem.this);
                 long id = dbItems.addItems(title.getText().toString(), desc.getText().toString(), date.getText().toString());
+
                 if (id > 0){
                     Toast.makeText(addItem.this, "REGISTRO GUARDADO", Toast.LENGTH_LONG).show();
                     cleanSlot();
                 }else{
                     Toast.makeText(addItem.this, "REGISTRO fallido", Toast.LENGTH_LONG).show();
                 }
+                 */
+            }
+        });
+    }
+
+    private void addItemsFS (String title, String desc, String date){
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        Map<String, Object> task = new HashMap<>();
+        task.put("Titulo", title);
+        task.put("Descripcion", desc);
+        task.put("Fecha", date);
+        db.collection("Tasks").add(task).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            @Override
+            public void onSuccess(DocumentReference documentReference) {
+                Toast.makeText(addItem.this, "Datos guardados en db", Toast.LENGTH_SHORT).show();
+                Log.d("ID: ", documentReference.getId());
+                Intent volverMenu = new Intent (addItem.this, mainPage.class);
+                startActivity(volverMenu);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(addItem.this, "Fallo al enviar datos", Toast.LENGTH_SHORT).show();
+                Log.d("problem: ", String.valueOf(e));
             }
         });
     }
@@ -47,26 +97,16 @@ public class addItem extends AppCompatActivity {
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title.setText("");
-                desc.setText("");
-                date.setText("");
+                titleText.setText("");
+                descText.setText("");
+                dateText.setText("");
             }
         });
     }
 
-
-
-
-
     public void goBackMain(View view){
-        Intent volverMenu = new Intent (this, mainPage.class);
-        startActivity(volverMenu);
-    }
-
-    private void cleanSlot(){
-        title.setText("");
-        desc.setText("");
-        date.setText("");
+        Intent volverMain = new Intent(this, mainPage.class);
+        startActivity(volverMain);
     }
 
 }

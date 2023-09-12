@@ -32,37 +32,6 @@
         tools:ignore="ImageContrastCheck" />
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="32dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="420dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/login" />
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="36dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="468dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/college_hat_hand" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="32dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="520dp"
-        android:onClick="goCalendar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/calendario" />
-
-    <ImageView
         android:id="@+id/imageView10"
         android:layout_width="48dp"
         android:layout_height="54dp"
@@ -74,26 +43,50 @@
         app:srcCompat="@mipmap/left_arrow"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="456dp"
+        android:fontFamily="@font/tt_chocolates_medium"
+        android:text="@string/data"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="32dp"
-        android:layout_height="62dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginTop="572dp"
-        android:onClick="goSetting"
+        android:id="@+id/imageView8"
+        android:layout_width="36dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="432dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/configuracion" />
+        app:srcCompat="@mipmap/college_hat_hand" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="32dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="588dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="goStart"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/login" />
+
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="593dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="556dp"
         android:fontFamily="@font/tt_chocolates_medium"
         android:onClick="goSetting"
         android:text="@string/settings"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,22 +94,12 @@
         android:id="@+id/startText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="440dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="608dp"
         android:fontFamily="@font/tt_chocolates_medium"
-        android:text="@string/start"
+        android:onClick="goStart"
+        android:text="Cerrar sesión"
         android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="492dp"
-        android:fontFamily="@font/tt_chocolates_medium"
-        android:text="@string/data"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -124,12 +107,35 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="543dp"
+        android:layout_marginStart="168dp"
+        android:layout_marginTop="508dp"
         android:fontFamily="@font/tt_chocolates_medium"
         android:onClick="goCalendar"
         android:text="@string/calendar"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="32dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="484dp"
+        android:onClick="goCalendar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/calendario" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="32dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="536dp"
+        android:onClick="goSetting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/configuracion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
